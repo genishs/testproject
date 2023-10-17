@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const data = {
   velopert: {
-    name: '김민준',
-    description: '리액트를 좋아하는 개발자',
+    name: '뚜또리',
+    description: '리액트를 초보 개발자',
   },
   gildong: {
     name: '홍길동',
