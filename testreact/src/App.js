@@ -1,32 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './Layout';
+import About from './pages/About';
+import Article from './pages/Article';
+import Articles from './pages/Articles';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import NotFound from './pages/NotFound';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a
-          className="App-link"
-          href="./reacttest2023101701"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          2023-10-17 part1. 리액트 시작하기
-        </a>
-      </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/profiles/:username" element={<Profile />} />
+          <Route path="/articles" element={<Articles />}>
+            <Route path=":id" element={<Article />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
   );
 }
 
