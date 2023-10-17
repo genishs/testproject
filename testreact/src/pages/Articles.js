@@ -1,7 +1,15 @@
 import { NavLink, Link, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 const Articles = () => {
 
+    const isLoggedIn = false;
+
+    if (!isLoggedIn) {
+      return <Navigate to="/login" replace={true} />;
+    }
+  
+  
   return (
     <>
         <div>
