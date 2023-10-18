@@ -8,11 +8,12 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import MyPage from './pages/MyPage';
+import MapTest from './pages/MapTest';
 
 const App = () => {
 
   return (
-      <Routes>
+      <><Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -22,9 +23,12 @@ const App = () => {
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/maptest" element={<MapTest />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      
+      </>
   );
 }
 
