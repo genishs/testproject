@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
-import About from './pages/About';
-import Article from './pages/Article';
-import Articles from './pages/Articles';
-import Home from './pages/Home';
-import Profile from './pages/Profile';
-import NotFound from './pages/NotFound';
-import Login from './pages/Login';
-import MyPage from './pages/MyPage';
-import MapTest from './pages/MapTest';
+import About from 'pages/About';
+import Article from 'pages/Article';
+import Articles from 'pages/Articles';
+import Home from 'pages/Home';
+import Profile from 'pages/Profile';
+import NotFound from 'pages/NotFound';
+import Login from 'pages/Login';
+import MyPage from 'pages/MyPage';
+import MapTest from 'pages/MapTest';
 
 const App = () => {
 
