@@ -1,8 +1,8 @@
-// MapTest.jsx
-import React, { useEffect, useRef, useState } from "react";
+// MapTest.js
+import React, { useEffect, useRef } from "react";
 
 import { Map as OlMap, View } from "ol";
-import { fromLonLat, get as getProjection } from "ol/proj";
+import { fromLonLat, } from "ol/proj";
 import { Tile as TileLayer, Vector as VectorLayer, } from "ol/layer";
 import { Vector as VectorSource, OSM } from "ol/source";
 import { GeoJSON } from "ol/format";
@@ -12,9 +12,6 @@ import Stroke from "ol/style/Stroke";
 
 export default function MapTest(options = {}) {
 
-  // location 정보 저장
-  const [location, setLocation] = useState();
-  
   // OlMap 타겟 지정을 위해 사용 (id를 지정 대신)
   const mapContent = useRef(null);
 
@@ -52,7 +49,7 @@ export default function MapTest(options = {}) {
         }),
       ],
       view: new View({
-        projection: getProjection("EPSG:5186"),
+        //projection: getProjection("EPSG:5186"),
         center: fromLonLat([126.8096364, 37.563429]),
         //center: fromLonLat([location.latitude, location.longitude]),
         zoom: 14,
